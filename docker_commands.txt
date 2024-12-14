@@ -1,0 +1,13 @@
+docker pull postgres:PG_VERSION
+docker pull postgres:17.2
+docker run --name myPostgresDB -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=postgres@007 -e POSTGRES_DB=postgresDB -d postgres:17.2
+docker exec -it containerID[from the above step] bash
+
+
+
+
+
+
+******************************** PSQL commands ********************************************************
+psql postgresDB [To switch to database instance]
+SELECT current_date;
